@@ -1,0 +1,27 @@
+.value {
+    .old-value{
+        color: #999A9B;
+        text-decoration-line: line-through;
+        line-height: 1.25rem;
+        letter-spacing: -0.07px;
+        font-size: 0.875rem;
+    }
+    .new-value{
+        color: #F3151B;
+        padding: 0.25rem 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: -0.1px;
+    }
+    .amount-installments{
+        color: #737375;
+        font-size: 0.75rem;
+        font-weight: 500;
+        line-height: 1rem;
+        letter-spacing: -0.06px;
+
+        span {
+            color: #1C1C1C;
+        }
+    }
+}
