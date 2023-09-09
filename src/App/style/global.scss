@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Inter', sans-serif;
+}
+
+//para ajudar no desenvolvimento, excluir no final
+html {
+    background: #DADCDE;
+} 
+
+button {
+    cursor: pointer;
+}
+
+
+.splide {
+    max-width: 75rem;
+    padding: 2.5rem 1rem 0;
+    margin: 0 auto;
+
+    li{
+      padding-right: 1rem;
+    }
+
+    .splide__pagination__page  {
+        background: #FEE5EC;
+
+        &.is-active{
+            background: #C22539;
+        }
+    }
+}
