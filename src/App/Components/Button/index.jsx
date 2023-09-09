@@ -17,7 +17,7 @@ function AddButton({ id }) {
 
   return arrayContainsValue(minicart, id) ? (
     <button className='add-button added' onClick={addItem}>
-      <img src="/assets/check.svg" alt="Produto adicionado" />
+      <img src="/Assets/check.svg" alt="Produto adicionado" />
       ADICIONADO
     </button> 
     ) : (
