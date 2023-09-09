@@ -26,7 +26,7 @@ function WishList({ id }) {
 
     return (
         <button className='wish-list' onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} onClick={addItem}>            
-            <img src={`/Assets/wishList-${ 
+            <img src={`/assets/wishList-${ 
                 hover ? (arrayContainsValue(wishList, id) ? 'hover-active' : 'hover-default') : 
                 ( arrayContainsValue(wishList, id) ? 'active' : 'default' ) 
             }.svg`} alt="Lista de Desejos" />           
