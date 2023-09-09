@@ -4,9 +4,9 @@ import AddButton from "../Button"
 import Value from "../Value";
 import TitleProduct from "../TitleProduct";
 import ImageProduct from '../ImageProduct';
-import WishList from '../WishList';
+import WishList from '../WishList-btn';
 
-function Card({id, name, value, image, minicartItems, setMinicartItems}) {
+function Card({id, name, value, image}) {
   return (
     <div className='card'>
       <div>
@@ -18,7 +18,7 @@ function Card({id, name, value, image, minicartItems, setMinicartItems}) {
         <TitleProduct text={name}/>
         <Value finalValue={value}/>
       </span>
-      <AddButton textDefault={"ADICIONAR"} id={id} minicartItems={minicartItems} setMinicartItems={setMinicartItems}/>
+      <AddButton textDefault={"ADICIONAR"} id={id}/>
     </div>
   ) 
 }

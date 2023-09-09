@@ -3,18 +3,14 @@ import propTypes from 'prop-types';
 import AppContext from './AppContext';
 
 function Provider({ children }) {
-
-  const [products, setProducts] = useState([]);
-  const [cartItems, setCartItems] = useState([]);
-  const [isCartVisible, setIsCartVisible] = useState(false);
+  const [minicart, setMinicart] = useState([]);
+  const [wishList, setWishList] = useState([]);
 
   const value = {
-    products,
-    setProducts,
-    cartItems,
-    setCartItems,
-    isCartVisible,
-    setIsCartVisible,
+    minicart,
+    setMinicart,
+    wishList, 
+    setWishList
   };
 
   return (

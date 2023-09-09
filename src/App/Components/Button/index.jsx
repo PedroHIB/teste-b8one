@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import './button.scss';
+import AppContext from '../../Context/AppContext';
 
-function AddButton({ textDefault, id, minicartItems, setMinicartItems }) {
+function AddButton({ id }) {
+  const { minicart, setMinicart } = useContext(AppContext);
+
+  const arrayContainsValue = (arr, value) => {
+    return arr.includes(value);
+  }
 
   const addItem = () => {
-    setMinicartItems([...minicartItems, id]);
-    
-    alert(`Produto adicionado ao carrinho: ${id}`);
+    if(!arrayContainsValue(minicart, id)) {
+      setMinicart([...minicart, id]);
+    } 
   };
 
-  return (
-    <button className={`add-button ${minicartItems.length > 0 && 'added'}`} onClick={addItem}>
-      {minicartItems.length > 0 && <img src="/Assets/check.svg" alt="Produto adicionado" />}
-      {textDefault}
+  return arrayContainsValue(minicart, id) ? (
+    <button className='add-button added' onClick={addItem}>
+      <img src="/Assets/check.svg" alt="Produto adicionado" />
+      ADICIONADO
+    </button> 
+    ) : (
+    <button className='add-button' onClick={addItem}>
+      ADICIONAR
     </button>
   );
 }

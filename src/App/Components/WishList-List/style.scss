@@ -1,10 +1,14 @@
-.minicart {
+.wishlist-list {
     position: absolute;
-    right: 0;
+    left: 0;
     top: 0;
     padding: 16px;
     z-index: 1;
-    list-style: none;
     background: white;
     border: 1px solid #C22539;
+    
+    li {
+        list-style: none;
+        text-align: end;
+    }
 }
